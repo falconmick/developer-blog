@@ -55,9 +55,6 @@ module.exports = options => {
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-react-helmet`,
-      `gatsby-plugin-twitter`,
-      `gatsby-plugin-emotion`,
-      `gatsby-plugin-theme-ui`,
     ].filter(Boolean),
   }
 }
