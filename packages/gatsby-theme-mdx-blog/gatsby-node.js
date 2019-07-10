@@ -182,6 +182,8 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId }) => {
 
   if (node.internal.type === `Mdx` && source === contentPath) {
     const slug = toPostPath(fileNode)
+        .replace(/[\\\/]+/g, '/') // replaces \\ with /
+        .replace(/\/index$/g, '') // replace /index to allow folder based blog posts
 
     const fieldData = {
       title: node.frontmatter.title,
