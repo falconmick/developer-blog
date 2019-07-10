@@ -10,9 +10,7 @@
   "dependencies": {
     "gatsby": "^2.13.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  },
-  "devDependencies": {
+    "react-dom": "^16.8.6",
     "gatsby-theme-mdx-blog": "1.0.0"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-mdx-blog",
   "version": "1.0.0",
-  "description": "A Gatsby theme for mdx blogs with no opinions",
+  "description": "A Gatsby theme for mdx blogs with no opinions + some remark 'n' sharp goodies",
   "main": "index.js",
   "private": true,
   "keywords": [
@@ -13,11 +13,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@mdx-js/mdx": "^1.0.21",
-    "@mdx-js/react": "^1.0.21",
-    "gatsby-plugin-feed": "^2.3.2",
-    "gatsby-plugin-mdx": "^1.0.7",
-    "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-sharp": "^2.2.2",
     "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^2.1.0",
@@ -26,15 +21,9 @@
     "gatsby-remark-smartypants": "^2.1.0",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-sharp": "^2.2.1",
-    "lodash.merge": "^4.6.1",
-    "prop-types": "^15.7.2",
-    "react-helmet": "^5.2.1",
-    "react-switch": "^5.0.0",
-    "remark-slug": "^5.1.2"
-  },
-  "devDependencies": {
+    "remark-slug": "^5.1.2",
+    "gatsby-theme-mdx-atom": "1.0.0",
     "gatsby": "^2.13.2",
-    "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
