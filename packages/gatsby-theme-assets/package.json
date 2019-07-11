@@ -1,0 +1,35 @@
+{
+  "name": "gatsby-theme-assets",
+  "version": "1.0.0",
+  "description": "A Gatsby theme for mdx blogs with no opinions + some remark 'n' sharp goodies",
+  "main": "index.js",
+  "private": true,
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "react",
+    "blog"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gatsby-plugin-sharp": "^2.2.2",
+    "gatsby-remark-code-titles": "^1.1.0",
+    "gatsby-remark-copy-linked-files": "^2.1.0",
+    "gatsby-remark-images": "^3.1.2",
+    "gatsby-remark-numbered-footnotes": "^1.0.0",
+    "gatsby-remark-smartypants": "^2.1.0",
+    "gatsby-source-filesystem": "^2.1.3",
+    "gatsby-transformer-sharp": "^2.2.1",
+    "remark-slug": "^5.1.2",
+    "gatsby-theme-mdx-atom": "1.0.0",
+    "gatsby": "^2.13.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.13.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

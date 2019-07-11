@@ -4,13 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --verbose",
     "build": "gatsby build"
   },
   "dependencies": {
     "gatsby": "^2.13.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "gatsby-theme-mdx-blog": "1.0.0"
+    "gatsby-theme-mdx-atom": "1.0.0",
+    "gatsby-theme-assets": "1.0.0"
   }
 }

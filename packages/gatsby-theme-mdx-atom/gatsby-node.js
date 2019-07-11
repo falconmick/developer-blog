@@ -5,6 +5,7 @@ const crypto = require(`crypto`)
 const Debug = require(`debug`)
 
 const debug = Debug(`gatsby-theme-mdx-atom`)
+debug(`inside of mdx-atom's gatsby-node`)
 
 // These are customizable theme options we only need to check once
 let basePath
@@ -16,6 +17,7 @@ const PostsTemplate = require.resolve(`./src/templates/posts`)
 
 // Ensure that content directories exist at site-level
 exports.onPreBootstrap = ({ store }, themeOptions) => {
+  debug(`Step onPreBootstrap`)
   const { program } = store.getState()
 
   basePath = themeOptions.basePath || `/`
@@ -32,6 +34,7 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
       mkdirp.sync(dir)
     }
   })
+  debug(`Step onPreBootstrap end`)
 }
 
 const mdxResolverPassthrough = fieldName => async (
@@ -51,6 +54,7 @@ const mdxResolverPassthrough = fieldName => async (
   return result
 }
 exports.sourceNodes = ({ actions, schema }) => {
+  debug(`Step sourceNodes`)
   const { createTypes } = actions
   createTypes(
     schema.buildObjectType({
@@ -84,9 +88,11 @@ exports.sourceNodes = ({ actions, schema }) => {
       interfaces: [`Node`],
     })
   )
+  debug(`Step sourceNodes end`)
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
+  debug(`Step createPages`)
   const { createPage } = actions
 
   const result = await graphql(`
@@ -157,11 +163,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       socialLinks,
     },
   })
+
+
+  debug(`Step createPages end`)
 }
 
 // Create fields for post slugs and source
 // This will change with schema customization with work
 exports.onCreateNode = ({ node, actions, getNode, createNodeId }) => {
+
+  debug(`Step onCreateNode`)
   const { createNode, createParentChildLink } = actions
 
   const toPostPath = node => {
@@ -207,4 +218,5 @@ exports.onCreateNode = ({ node, actions, getNode, createNodeId }) => {
     })
     createParentChildLink({ parent: fileNode, child: node })
   }
+  debug(`Step onCreateNode end`)
 }

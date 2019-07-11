@@ -1,4 +1,9 @@
 // gatsby-config.js
+const Debug = require(`debug`)
+
+const debug = Debug(`site`)
+
+debug(`inside of site's gatsby-config`)
 module.exports = {
     plugins: [
         {
@@ -8,6 +13,9 @@ module.exports = {
                 basePath: `/blog`,
             },
         },
+        {
+            resolve: `gatsby-theme-assets`
+        }
     ],
     siteMetadata: {
         // Used for the site title and SEO

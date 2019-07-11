@@ -1,4 +1,11 @@
+const Debug = require(`debug`)
+
+const debug = Debug(`gatsby-theme-mdx-atom`)
+
+debug(`inside of mdx-atom's gatsby-config`)
 module.exports = options => {
+  debug(`inside of mdx-atom's gatsby-config's export`)
+
   const { mdx = true } = options
 
   return {
